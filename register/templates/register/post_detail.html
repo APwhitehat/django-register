@@ -1,0 +1,8 @@
+{% extends 'register/base.html' %}
+
+{% block content %}
+    <div class="post">
+        <h1>{{ post.username }}</h1>
+        <p>{{ post.password|linebreaksbr }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'register/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+           <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.username }}</a></h1>
+            <p>{{ post.password|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
